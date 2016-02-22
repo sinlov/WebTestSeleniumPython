@@ -70,8 +70,14 @@ path_chrome_driver_win = "C:\Users\sin-base\AppData\Local\Google\Chrome\Applicat
 path_chrome_driver_osx = "/usr/bin/chromedriver"
 
 
-def init_web_driver():
-    return webdriver.Chrome(path_chrome_driver_win)
+def init_chrome():
+    return webdriver.Chrome(path_chrome_driver_osx)
+
+def init_android_driver():
+    return webdriver.Android()
+
+def init_safari():
+    return webdriver.Safari()
 
 ```
 
@@ -81,16 +87,14 @@ You **must assign** your `path_chrome_driver_win` to your runtime path and insta
 
 ```python
 path_chrome_driver_win = "your chrome driver path"
+def init_chrome():
+    return webdriver.Chrome(path_chrome_driver_win)
 ```
 
 When you **use other driver**  you can create like this
 
 ```python
-path_firefox_driver_win = "firefox path"
-
-
-def init_web_driver():
-    return webdriver.Firefox(path_firefox_driver_win)
+local_properties.init_android_driver()
 ```
 
 ### if use OS X
@@ -98,7 +102,7 @@ def init_web_driver():
 install **OS X chrome driver** and change **init_web_driver** like this
 
 ```python
-def init_web_driver():
+def init_chrome():
     return webdriver.Chrome(path_chrome_driver_osx)
 ```
 
@@ -134,6 +138,15 @@ print my_log.d('test_one', 'message')
 print my_log.w('test_one', 'message')
 print my_log.e('test_one', 'message')
 ```
+
+### Use Type check `type_check`
+
+```python
+from utils import type_check
+
+```
+
+you can use `type_check.boolean()` `type_check.string` ... to type check or update check by yourself
 
 ## When Error
 
