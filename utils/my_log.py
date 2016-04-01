@@ -31,10 +31,9 @@ def init_log_out(is_out_put=True):
 
 def v(where, message):  # real signature unknown; restored from __doc__
     """
-     S.v(where, message) -> string
+     S.v(where) -> string
     """
     type_check.string(where)
-    type_check.string(message)
     res = [time_utils.default(), V, "[", where, "] ", message]
     out = "".join(res)
     global isprint
@@ -45,10 +44,9 @@ def v(where, message):  # real signature unknown; restored from __doc__
 
 def i(where, message):
     """
-     S.i(where, message) -> string
+     S.i(where) -> string
     """
     type_check.string(where)
-    type_check.string(message)
     res = [time_utils.default(), I, "[", where, "] ", message]
     out = "".join(res)
     global isprint
@@ -59,10 +57,9 @@ def i(where, message):
 
 def d(where, message):
     """
-     S.e(where, message) -> string
+     S.e(where) -> string
     """
     type_check.string(where)
-    type_check.string(message)
     res = [time_utils.default(), D, "[", where, "] ", message]
     out = "".join(res)
     global isprint
@@ -76,7 +73,6 @@ def w(where, message):
      S.w(where, message) -> string
     """
     type_check.string(where)
-    type_check.string(message)
     res = [time_utils.default(), W, "[", where, "] ", message]
     out = "".join(res)
     global isprint
@@ -87,10 +83,9 @@ def w(where, message):
 
 def e(where, message):
     """
-     S.e(where, message) -> string
+     S.e(where) -> string
     """
     type_check.string(where)
-    type_check.string(message)
     res = [time_utils.default(), E, "[", where, "] ", message]
     out = "".join(res)
     global isprint
