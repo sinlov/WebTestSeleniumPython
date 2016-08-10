@@ -12,7 +12,8 @@ wait_beat = 3000
 
 web_driver = chrome_webdriver.maximize()
 
-web_driver.get('http://test.g.kuaifazs.com/web/cr/Web.php')
+# web_driver.get('http://test.g.kuaifazs.com/web/cr/Web.php')
+web_driver.get('http://newgame.kuaifazs.com/newgame/gameClassify?tag=all&size=all&year=all&page=1&pageSize=10')
 
 for i in range(0, test_time):
     web_driver.implicitly_wait(wait_beat)
