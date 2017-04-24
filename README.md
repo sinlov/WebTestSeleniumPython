@@ -52,6 +52,8 @@ utils file
 you must install driver just like  [ChromeDriver driver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
 
+http://selenium-python.readthedocs.io/faq.html#how-to-use-chromedriver
+
 - mac
 
 can install by brew
