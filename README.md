@@ -52,6 +52,15 @@ utils file
 you must install driver just like  [ChromeDriver driver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
 
+- mac
+
+can install by brew
+
+```sh
+brew install chromedriver
+brew info chromedriver
+```
+
 ## create file
 
 This is for team setting
@@ -67,7 +76,8 @@ __author__ = '"sinlov"'
 from selenium import webdriver
 
 path_chrome_driver_win = "C:\Users\sin-base\AppData\Local\Google\Chrome\Application\chromedriver.exe"
-path_chrome_driver_osx = "/usr/bin/chromedriver"
+# path_chrome_driver_osx = "/usr/bin/chromedriver"
+path_chrome_driver_osx = "/usr/local/Cellar/chromedriver/2.29/bin/chromedriver"
 
 
 def init_chrome():
