@@ -104,7 +104,7 @@ def out_log(buf=str):
             os.makedirs(log_path)
         file_obj = open(log_file_full_path, 'a')
         try:
-            file_obj.writelines(buf + '\n')
+            file_obj.writelines('{0}\n'.format(buf))
         finally:
             file_obj.close()
     else:
